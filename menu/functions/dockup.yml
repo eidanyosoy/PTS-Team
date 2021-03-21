@@ -25,13 +25,13 @@
         pgrole: 'dockup'
         image: 'dockupdater/dockupdater'
 
-    - name: 'Setting {{pgrole}} Volumes'
+    - name: 'Setting dockup Volumes'
       set_fact:
         pg_volumes:
           - '/var/run/docker.sock:/var/run/docker.sock'
           - '/etc/localtime:/etc/localtime:ro'
 
-    - name: 'Setting {{pgrole}} ENV'
+    - name: 'Setting dockup ENV'
       set_fact:
         pg_env:
           PUID: '1000'
@@ -46,10 +46,10 @@
           DISABLE_CONTAINERS_CHECK: 'false'
 
     # MAIN DEPLOYMENT #############################################################
-    - name: 'Deploying {{pgrole}}'
+    - name: 'Deploying dockup'
       docker_container:
-        name: '{{pgrole}}'
-        image: '{{image}}'
+        name: 'dockup'
+        image: 'dockupdater/dockupdater'
         pull: yes
         volumes: '{{pg_volumes}}'
         env: '{{pg_env}}'
@@ -57,5 +57,5 @@
         networks:
           - name: plexguide
             aliases:
-              - '{{pgrole}}'
+              - 'dockup'
         state: started
