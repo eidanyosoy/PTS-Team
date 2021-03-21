@@ -26,7 +26,7 @@ pginstall() {
   core docstart
   rollingpart
   portainer
-  oruborus
+  dockup
   core motd
   core gcloud
   core cleaner
@@ -119,10 +119,10 @@ wstatus=$(docker ps --format '{{.Names}}' | grep "watchtower")
 if [[ "$wstatus" == "watchtower" ]]; then 
     docker stop watchtower >/dev/null 2>&1
 	docker rm watchtower >/dev/null 2>&1
-	ansible-playbook /opt/plexguide/menu/functions/ouroboros.yml
+	ansible-playbook /opt/plexguide/menu/functions/dockup.yml
 fi
-ostatus=$(docker ps --format '{{.Names}}' | grep "ouroboros")
-if [[ "$ostatus" != "ouroboros" ]]; then ansible-playbook /opt/plexguide/menu/functions/ouroboros.yml; fi
+ostatus=$(docker ps --format '{{.Names}}' | grep "dockup")
+if [[ "$ostatus" != "dockup" ]]; then ansible-playbook /opt/plexguide/menu/functions/dockup.yml; fi
 }
 gcecheck() {
 gcheck=$(dnsdomainname | tail -c 10)
