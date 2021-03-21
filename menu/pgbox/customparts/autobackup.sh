@@ -145,12 +145,12 @@ question2() {
   tee <<-EOF
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Rebuilding Ouroboros!
+Rebuilding Dockup!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 EOF
 
-  ansible-playbook /opt/plexguide/menu/functions/ouroboros.yml
+  ansible-playbook /opt/plexguide/menu/functions/dockup.yml
   complete
 }
 
