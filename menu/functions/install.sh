@@ -114,7 +114,7 @@ updateprime() {
   echo "21" >${abc}/pg.mountcheck
   echo "11" >${abc}/pg.watchtower
 }
-oruborus() {
+dockup() {
 wstatus=$(docker ps --format '{{.Names}}' | grep "watchtower")
 if [[ "$wstatus" == "watchtower" ]]; then 
     docker stop watchtower >/dev/null 2>&1
