@@ -14,25 +14,17 @@ if [[ ! -f "/bin/pts" ]]; then
 clear 
  printf '
 ┌─────────────────────────────────────┐
-│         -==   Team PTS  ==-         │
+│         -==  Downlader  ==-         │
 │ ————————————————————————————————————│
 │ Restart PTS:              pts       │
 │ Update  PTS:              ptsupdate │
 │ View the PTS Logs:        blitz     │
-│ Download Your PTS Fork:   pgfork    │
 │                                     │
 │ ————————————————————————————————————│
-│ Thanks For Being Part of the Team   │
 │                                     │
 │ Thanks to:                          │
 │                                     │
-│ Davaz, Deiteq, FlickerRate,         │
-│ ClownFused, MrDoob, Sub7Seven,      │
-│ TimeKills, The_Creator, Desimaniac, │
-│ l3uddz, RXWatcher, Calmcacil,       │
-│ ΔLPHΔ , Maikash , Porkie            │
-│ CDN_RAGE , hawkinzzz , The_DeadPool │
-│ BugHunter : Krallenkiller           │
+│           The PTS Team              │
 │                                     │
 └─────────────────────────────────────┘
 '
